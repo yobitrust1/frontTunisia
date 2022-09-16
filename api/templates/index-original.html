@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+
+</head>
+
+<body>
+
+    <div class="login">
+      <h1>Predict Severity</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+          <input type="text" name="Laboratory_test_L" placeholder="Laboratory_test_L" required="required" />
+            <input type="text" name="Laboratory_test_N" placeholder="Laboratory_test_N" required="required" />    
+        <input type="text" name="Laboratory_test_ESR_(mm/hr)" placeholder="Laboratory_test_ESR_(mm/hr)" required="required" />
+        <input type="text" name="Laboratory_test_CRP_(mg/L)" placeholder="Laboratory_test_CRP_(mg/L)" required="required" />
+        <input type="text" name="Laboratory_test_PCT_(ng/ml)" placeholder="Laboratory_test_PCT_(ng/ml)" required="required" />
+        <input type="text" name="Laboratory_test_CK_MB_(ng/ml)" placeholder="Laboratory_test_CK_MB_(ng/ml)" required="required" />
+        <input type="text" name="Laboratory_test_D_dimer_(ug/ml)" placeholder="Laboratory_test_D_dimer_(ug/ml)" required="required" />
+        <input type="text" name="Laboratory_test_ALT_(U/L)" placeholder="Laboratory_test_ALT_(U/L)" required="required" />
+        <input type="text" name="Laboratory_test_AST_(U/L)" placeholder="Laboratory_test_AST_(U/L)" required="required" />
+        <input type="text" name="Laboratory_test_ALB_(g/L)" placeholder="Laboratory_test_ALB_(g/L)" required="required" />
+        <input type="text" name="Laboratory_test_LDH_(U/L)" placeholder="Laboratory_test_LDH_(U/L)" required="required" />
+        <input type="text" name="Age" placeholder="Age" required="required" />
+        <input type="text" name="CK" placeholder="CK" required="required" />
+        <input type="text" name="O2%" placeholder="O2%" required="required" />
+        <input type="text" name="Symptoms_Cough" placeholder="Symptoms_Cough" required="required" />
+        <input type="text" name="Symptoms_Dyspnea" placeholder="Symptoms_Dyspnea" required="required" />
+        <input type="text" name="Symptoms_Fatigue" placeholder="Symptoms_Fatigue" required="required" />
+    
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+       {{ prediction_text }}
+    
+     </div>
+  
+ 
+
+
+
+</body>
+</html>
