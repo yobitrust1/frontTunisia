@@ -186,6 +186,7 @@ const AddPatient = (props) => {
           placeholder="Identifiant"
           onChangeText={handleIdentifiantChange}
         />
+
         <FormInput3
         mask="aaaaaaaaaaa"
           placeholder="Nom"

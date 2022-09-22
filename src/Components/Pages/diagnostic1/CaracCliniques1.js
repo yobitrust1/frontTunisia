@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
 import FormInput from '../../Form/FormInput';
+import FormInput2 from '../../Form/FormInput2';
 import FormInput4 from '../../Form/FormInput4';
 import FormButton from '../../Form/FormButton';
 import FormButton2 from '../../Form/FormButton2';

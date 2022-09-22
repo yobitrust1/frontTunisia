@@ -16,12 +16,21 @@ const App = (props) => {
 
   return (
     <div>
+      <br/>
+      <p> </p>
       <input
         type="number"
         value={value}
         placeholder={props.placeholder} 
         onChange={handleChange}
       />
+      
+       { (value==props.max ||value==props.min) &&
+        <div>
+          <br/>
+        <p class="text-danger text-content-center">min is :{props.min} and max is:{props.max}</p>
+</div>
+      }
     </div>
   );
 };

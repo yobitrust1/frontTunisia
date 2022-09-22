@@ -112,11 +112,7 @@ const AntecedentsList = (props) => {
         </View>
 
       </View>
-      <div
-          style={{ display: display ? "flex" : "none" }}
-          className="flex justify-center align-middle my-4 p-2"
-        >
-        </div>
+ 
         
       </div>
     </div>

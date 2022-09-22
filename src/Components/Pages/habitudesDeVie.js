@@ -106,11 +106,11 @@ const HabitudesDeVie = (props) => {
 		          <div class="form-check-inline">
 
 					<label class="customradio"><span class="radiotextsty">Oui</span>
-					  <input type="radio" checked="checked" name="radio"/>
+					  <input type="radio" checked="checked"  name="gender1"/>
 					  <span class="checkmark"></span>
 					</label>        
 					<label class="customradio"><span class="radiotextsty">Non</span>
-					  <input type="radio" name="radio"/>
+					  <input type="radio"  name="gender1"/>
 					  <span class="checkmark"></span>
 					</label>
 
@@ -160,11 +160,11 @@ const HabitudesDeVie = (props) => {
 		          <div class="form-check-inline">
 
 					<label class="customradio"><span class="radiotextsty">Oui</span>
-					  <input type="radio" checked="checked" name="radio"/>
+					  <input type="radio" checked="checked" name="radio2"/>
 					  <span class="checkmark"></span>
 					</label>        
 					<label class="customradio"><span class="radiotextsty">Non</span>
-					  <input type="radio" name="radio"/>
+					  <input type="radio" name="radio2"/>
 					  <span class="checkmark"></span>
 					</label>
 

@@ -7,9 +7,22 @@ import FormButton3 from "./FormButton3";
 import { DatePicker } from '@assenti/rui-components';
 import '@assenti/rui-components/css/index.css';
 import { Text,View, StyleSheet } from 'react-native';
-
+import toast, { Toaster } from 'react-hot-toast';
+const notify = () => toast.success('Enregistrer', {
+  style: {
+    border: '1px solid #713200',
+    padding: '16px',
+    color: '#713200',
+  },
+  iconTheme: {
+    primary: '#713200',
+    secondary: '#FFFAEE',
+  },
+}); 
 
 const CaracCls = (props) => {
+
+
   return (
     
 <div style={tailwind("items-center")}>
@@ -22,7 +35,7 @@ const CaracCls = (props) => {
         
         
  
-<div><FormButton3 title="Enregistrer" onPress={props.onSubmit} /></div>
+<div><FormButton3 title="Enregistrer" onPress={() => {  notify();return props.onSubmit;}}   /></div>
       
       </div>
   );

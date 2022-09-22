@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
 import FormInput from "../../Form/FormInput";
-import FormButton from "../../Form/FormButton";
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import { View, Text, StyleSheet } from 'react-native';
 import Container from '@material-ui/core/Container';
 import ParticlesBg from "particles-bg";
 import '../home.css';
-import ok from "../../img/webbb.png";
+import add from "../../img/11.png";
 let config = {
       num: [4, 7],
       rps: 0.1,
@@ -27,13 +27,13 @@ let config = {
 
 
 
-
-const Grossesse = (props) => {
+const Grossesse1 = (props) => {
   const [simple, setSimple] = useState(true)
   const [gpa, setGPA] = useState(true)
   const [sa, setSa] = useState(true)
   const [path, setPath] = useState(true)
   const [pathologie, setPathologie] = useState(null)
+
 
   var handleSimpleChange = (data) => {
       setSimple(data.target.value)
@@ -72,17 +72,25 @@ const Grossesse = (props) => {
 
   return (
     <div class="big">
-  
-    <div class="d-flex md-0  py-0 ">
-    <img src={ok} />
+    <div style={mystyle}>
+    <div class="container h-100">
+     <div class="d-flex justify-content-center h-10">
+    <div class="user_card"> 
+    <div class="d-flex justify-content-center">
+    <div class="brand_logo_container"> 
+          <img src={add} class="brand_logo" alt="Logo"/>
     </div>
-    <div class="ok">
-          <Container >
+    </div>
+    <div class="d-flex justify-content-center form_container">
+    </div>
+    <div class="d-flex justify-content-center mt-10 lo_container">
+<Container >
+
       <View style={tailwind(' items-center ')} >
         <Text style={tailwind('text-gray-700 font-bold py-2 text-xl')}>Grossesse en cours</Text>
         <View style={styles.row}>
                 <div>
-            <Text style={tailwind('text-gray-700 py-2')}>Grossesse?</Text>
+        	  <Text style={tailwind('text-gray-1000 py-2')}>Grossesse?</Text>
                   <input  onChange={handleSimpleChange} type="radio" value={true} name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Grossesse simple</Text>
                   <input  onChange={handleSimpleChange} type="radio" value={false} name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Grossesse compliqué</Text>
                 </div>
@@ -101,19 +109,35 @@ const Grossesse = (props) => {
               <input  onChange={handlePathChange} type="radio" value={false} name="gender2" /> <Text style={tailwind('text-gray-700 py-2')}>Non</Text>
             </div>
           </View>
+        <View>
+          {(path === true) && <FormInput placeholder="Précisier les pathologies" onChangeText={handlePathologieChange} />}
+        </View>
 
-          {(path === "true") && <FormInput placeholder="Précisier les pathologies" onChangeText={handlePathologieChange} />}
+
+
 
         <View style={styles.row}>
-          <FormButton title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux") }} />
-          <FormButton title="Enregister" onPress={handleSubmit} />
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
+
         </View>
       </View>
+     
       </Container>
-</div>
-
-</div>
+     </div>  
+      </div>
+      </div>
+      </div>  
+      </div>
+      </div>
   );
+};
+const mystyle = {
+  
+
+  backgroundposition: "center",
+  backgroundrepeat: "no-repeat",
+  backgroundsize: "cover"
 };
 const styles = StyleSheet.create({
   row: {
@@ -136,4 +160,4 @@ const mapActionToProps = {
   antecedentsMedicaux: actions.antecedentsMedicaux
 };
 
-export default connect(mapStateToProps, mapActionToProps)(Grossesse);
+export default connect(mapStateToProps, mapActionToProps)(Grossesse1);

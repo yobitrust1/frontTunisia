@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
 import FormInput from "../../Form/FormInput";
-import FormButton from "../../Form/FormButton";
-import FormButton0 from "../../Form/FormButton0";
+
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import { View, Text, StyleSheet } from 'react-native';
@@ -76,8 +76,8 @@ const Retinopathie1 = (props) => {
         <FormInput title="Ancienneté" placeholder="Ancienneté" onChangeText={handleAnciennteChange} type="decimal-pad"  type="number"  />
         <FormInput title="Traitement" placeholder="Traitement" onChangeText={handleTraitementChange} />
         <View style={styles.row}>
-          <FormButton0 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
-          <FormButton0 title="Enregister" onPress={handleSubmit} />
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
         </View>
       </View>
      
@@ -99,7 +99,7 @@ const mapActionToProps = {
   antecedentsMedicaux: actions.antecedentsMedicaux
 };
 const mystyle = {
-  color: "white",
+  
 
   backgroundposition: "center",
   backgroundrepeat: "no-repeat",

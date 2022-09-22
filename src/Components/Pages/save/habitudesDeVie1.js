@@ -147,12 +147,19 @@ const HabitudesDeVie1 = (props) => {
 
 
                 </View>
-                <FormInput3 mask="999" placeholder="Poids"
-                    onChangeText={handlePoidsChange} />
-                <FormInput3 mask="999" placeholder="Taille"
-                    onChangeText={handleTailleChange} />
-                <FormInput placeholder="GS"
-                    onChangeText={handleGsChange} />
+                <FormInput4 placeholder="Poids"
+                                min={0}   max={10}
+                                onChangeText={handlePoidsChange}
+                            />
+                <FormInput4 placeholder="Taille(cm)"
+                                min={0}   max={10}
+                                onChangeText={handleTailleChange}
+                            />
+                <FormInput4 placeholder="GS"
+                                min={0}   max={10}
+                                onChangeText={handleGsChange}
+                            />
+                
                 <View style={styles.row}>
                     <FormButton0 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
                     <FormButton0 title="Enregistrer" onPress={handleSubmit} />

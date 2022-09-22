@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
 import FormInput from "../../Form/FormInput";
-import FormButton1 from "../../Form/FormButton1";
-import FormButton3 from "../../Form/FormButton3";
-import FormButton from "../../Form/FormButton";
+
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
-import {View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Container from '@material-ui/core/Container';
 import ParticlesBg from "particles-bg";
 import '../home.css';
-import ff from "../../img/web0a.png";
+import add from "../../img/11.png";
 let config = {
       num: [4, 7],
       rps: 0.1,
@@ -25,12 +24,12 @@ let config = {
       cross: "dead",
       random: 10
     };
+//import 'localstorage-polyfill';
 
 
 
 
-
-const Retinopathie = (props) => {
+const Retinopathie1 = (props) => {
 
   const [anciennete, setAnciennete] = useState(0.0);
   const [traitement, setTraitement] = useState(0);
@@ -55,38 +54,39 @@ const Retinopathie = (props) => {
     props.antecedentsMedicaux(props.patientList["cin"], values)
     props.navigation.navigate("AddAntecendentsMedicaux")
   }
-
-
-
-
-  return (
-    <div class="big">
+ 
+    return (
+      <div class="big">
+      <div style={mystyle}>
+      <div class="container h-100">
+       <div class="d-flex justify-content-center h-10">
+      <div class="user_card"> 
+      <div class="d-flex justify-content-center">
+      <div class="brand_logo_container"> 
+            <img src={add} class="brand_logo" alt="Logo"/>
+      </div>
+      </div>
+      <div class="d-flex justify-content-center form_container">
+      </div>
+      <div class="d-flex justify-content-center mt-10 lo_container">
+  <Container >
   
-    <div class="d-flex md-0  py-0 ">
-    <img src={ff} />
-    </div>
-    <div class="j1j">
-          <Container >
       <View style={tailwind(' items-center ')} >
         <Text style={tailwind('text-gray-700 font-bold py-2 text-xl')}>Retinopathie</Text>
-
         <FormInput title="Ancienneté" placeholder="Ancienneté" onChangeText={handleAnciennteChange} type="decimal-pad"  type="number"  />
         <FormInput title="Traitement" placeholder="Traitement" onChangeText={handleTraitementChange} />
-
-
-
         <View style={styles.row}>
-          <FormButton3 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux") }} />
-          <FormButton1 title="Enregister" onPress={handleSubmit} />
-
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
         </View>
-
-
-
       </View>
+     
       </Container>
+      </div>  
       </div>
-      
+      </div>
+      </div>  
+      </div>
       </div>
   );
 };
@@ -97,6 +97,13 @@ const mapStateToProps = (state) => ({
 const mapActionToProps = {
 
   antecedentsMedicaux: actions.antecedentsMedicaux
+};
+const mystyle = {
+  
+
+  backgroundposition: "center",
+  backgroundrepeat: "no-repeat",
+  backgroundsize: "cover"
 };
 const styles = StyleSheet.create({
   body: {
@@ -111,4 +118,4 @@ const styles = StyleSheet.create({
     padding: 10
   },
 });
-export default connect(mapStateToProps, mapActionToProps)(Retinopathie);
+export default connect(mapStateToProps, mapActionToProps)(Retinopathie1);

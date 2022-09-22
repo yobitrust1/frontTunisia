@@ -3,7 +3,7 @@ import './home.css';
 import FormInput from "../Form/FormInputt";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody,  MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
-function App() {
+function App(props) {
   const [Mg2_1, setMg2_1] = useState(1);
   const [LDH1, setLDH1] = useState(1);
   const [GB1, setGB1] = useState(1);
@@ -88,6 +88,8 @@ useEffect(() => {
        
        </form>
        <p> "prediction est "{prediction}</p>
+       <MDBBtn type="button" gradient="blue" rounded className="btn px-md-5 z-depth-1a"onClick={() => props.navigation.navigate("SearchPatient")}><h3>Retour</h3></MDBBtn>
+
                     </MDBCard>
                   </MDBCol>
                 </MDBRow>

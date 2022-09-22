@@ -9,7 +9,7 @@ const FormInput = (props) => {
     <>
       <View style={tailwind('w-1/2 items-center')}>
         
-          <input style={tailwind('border  border-blue-800 my-3  rounded-md w-64')} 
+          <input style={tailwind('border  border-blue-800 my-3  rounded-md w-64')}
           type={props.type} 
           placeholder={props.placeholder} 
           min={props.min}

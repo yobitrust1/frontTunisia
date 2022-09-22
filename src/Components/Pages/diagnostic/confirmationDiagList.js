@@ -94,7 +94,7 @@ const AntecedentsList = (props) => {
   </div>
         <View style={styles.row}>
           <FormButton title="Retour" onPress={() => props.navigation.navigate("DiagnosticDetails")} />
-          <FormButton title=" Ajouter un antécedent médical" onPress={() => props.navigation.navigate("AddAntecendentsMedicaux")} />
+          <FormButton title=" Ajouter Confirmation diagnostique" onPress={() => props.navigation.navigate("ConfirmationDiag")} />
 
         </View>
 

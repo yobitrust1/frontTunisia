@@ -9,6 +9,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import Container from '@material-ui/core/Container';
 import ParticlesBg from "particles-bg";
 import '../home.css';
+import "../login1.css";
 import naa from "../../img/naa.png";
 const AntecendentsMedicaux = (props) => {
   let config = {
@@ -28,12 +29,10 @@ const AntecendentsMedicaux = (props) => {
 
 
   return (
-    <div class="big">
-  
-  <div class="d-flex md-0  py-0 ">
-  <img src={naa} />
-  </div>
-  <div class="mall">
+    <div>
+    <div className="bg-image"></div>
+    <div className="bg-text">
+    <View style={tailwind(' items-center ')} >
         
         <Container style={tailwind(' items-center ')}>
       <View style={tailwind(' items-center ')} >
@@ -45,8 +44,8 @@ const AntecendentsMedicaux = (props) => {
         <FormButton2 title="Retour" onPress={() => { props.navigation.navigate("DiagnosticDetails") }} />
       </View>
       </Container>
+      </View>
 </div>
-
 </div>
   );
 };

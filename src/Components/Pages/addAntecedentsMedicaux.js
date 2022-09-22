@@ -9,6 +9,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import Container from '@material-ui/core/Container';
 import ParticlesBg from "particles-bg";
 import './home.css';
+import "./login1.css";
 import ml from "../img/ml.png";
 
 
@@ -34,33 +35,31 @@ const AddAntecendentsMedicaux = (props) => {
       setNextPath(data.target.value)
   }
   return (
-    <div class="big">
-  
-    <div class="d-flex md-0  py-0 ">
-    <img src={ml} />
-    </div>
-    <div class="nal">
+    <div>
+<div className="bg-image"></div>
+<div className="bg-text1">
+<View  >
           
           <Container >
-      <View style={tailwind(' items-center ')} >
+      <View  >
 
 
-        <View style={tailwind("py-8")} >
+        <View  >
         <div  onChange={handleAntecedentChange}>
 
-      <div>  <input type="radio" value="PathRespChronique" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Pathologie respiratoire chronique ?</Text></div>
-      <div>  <input type="radio" value="Cardiopathies" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Cardiopathies ?</Text></div>
-      <div>  <input type="radio" value="TrRythCardiaque" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Trouble du rythme cardiaque ?</Text></div>
-      <div>  <input type="radio" value="HTA" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>HTA ?</Text></div>
-      <div>  <input type="radio" value="Diabete" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Diabète ?</Text> </div>
-      <div>   <input type="radio" value="InsRenaleChro" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Insuffisance rénale chronique ?</Text></div>
-      <div>   <input type="radio" value="AVC" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>AVC ? </Text></div>
-      <div>   <input type="radio" value="Retinopathie" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Rétinopathie ?</Text></div>
-      <div>   <input type="radio" value="ATCDchir" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>ATCD chirugicaux ?</Text></div>
-      <div>   <input type="radio" value="Grossesse" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Grossesse en cours ?</Text></div>
-      <div>   <input type="radio" value="PriseAINS" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Prise récente d'AINS ?</Text></div>
-      <div>   <input type="radio" value="Immunosuppreseur" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Traitement immunosuppresseur ?</Text></div>
-      <div>   <input type="radio" value="AutresATCD" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Autres ATCD ?</Text></div>
+      <div>  <input type="radio" value="PathRespChronique" name="gender" /> <Text style={tailwind(' py-2')}>Pathologie respiratoire chronique ?</Text></div>
+      <div>  <input type="radio" value="Cardiopathies" name="gender" /> <Text style={tailwind(' py-2')}>Cardiopathies ?</Text></div>
+      <div>  <input type="radio" value="TrRythCardiaque" name="gender" /> <Text style={tailwind(' py-2')}>Trouble du rythme cardiaque ?</Text></div>
+      <div>  <input type="radio" value="HTA" name="gender" /> <Text style={tailwind(' py-2')}>HTA ?</Text></div>
+      <div>  <input type="radio" value="Diabete" name="gender" /> <Text style={tailwind(' py-2')}>Diabète ?</Text> </div>
+      <div>   <input type="radio" value="InsRenaleChro" name="gender" /> <Text style={tailwind(' py-2')}>Insuffisance rénale chronique ?</Text></div>
+      <div>   <input type="radio" value="AVC" name="gender" /> <Text style={tailwind(' py-2')}>AVC ? </Text></div>
+      <div>   <input type="radio" value="Retinopathie" name="gender" /> <Text style={tailwind(' py-2')}>Rétinopathie ?</Text></div>
+      <div>   <input type="radio" value="ATCDchir" name="gender" /> <Text style={tailwind(' py-2')}>ATCD chirugicaux ?</Text></div>
+      <div>   <input type="radio" value="Grossesse" name="gender" /> <Text style={tailwind(' py-2')}>Grossesse en cours ?</Text></div>
+      <div>   <input type="radio" value="PriseAINS" name="gender" /> <Text style={tailwind(' py-2')}>Prise récente d'AINS ?</Text></div>
+      <div>   <input type="radio" value="Immunosuppreseur" name="gender" /> <Text style={tailwind(' py-2')}>Traitement immunosuppresseur ?</Text></div>
+      <div>   <input type="radio" value="AutresATCD" name="gender" /> <Text style={tailwind(' py-2')}>Autres ATCD ?</Text></div>
 
       </div>
         </View>
@@ -70,8 +69,9 @@ const AddAntecendentsMedicaux = (props) => {
         </View>
       </View>
       </Container>
+
+      </View>
 </div>
-<ParticlesBg type="cobweb" config={config} bg={true} />
 </div>
   );
 };

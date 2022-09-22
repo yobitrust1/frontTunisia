@@ -17,7 +17,7 @@ import '../home.css';
 import Steps from "../../Form/Steps";
 import toast, { Toaster } from 'react-hot-toast';
 
-  const notify = () => toast.success('Supprimer', {
+  const notify = () => toast.success('Enregistrer', {
     style: {
       border: '1px solid #713200',
       padding: '16px',

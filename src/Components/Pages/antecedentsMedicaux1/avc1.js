@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
 import FormInput from "../../Form/FormInput";
-import FormButton from "../../Form/FormButton";
-import FormButton10 from "../../Form/FormButton10";
+
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import { View, Text, StyleSheet } from 'react-native';
@@ -90,8 +90,8 @@ const AVC1 = (props) => {
                   <input  onChange={handleAvcChange} type="radio" value="2" name="gender" /> <Text style={tailwind('text-gray-700 py-2')}>Plusieurs episodes</Text>
                 </div>
         </View>
-        <FormInput title="Ancienneté" placeholder="Ancienneté" onChangeText={handleAnciennteChange} type="decimal-pad"  type="number"  />
-        <FormInput title="Traitement" placeholder="Traitement" onChangeText={handleTraitementChange} />
+        <FormInput  placeholder="Ancienneté" onChangeText={handleAnciennteChange} type="decimal-pad"  type="number"  />
+        <FormInput placeholder="Traitement" onChangeText={handleTraitementChange} />
         <View style={styles.row}>
                 <div>
                 <Text style={tailwind('text-gray-700 py-2')}>Handicap?</Text>
@@ -101,8 +101,8 @@ const AVC1 = (props) => {
                 </div>
               </View>
         <View style={styles.row}>
-          <FormButton10 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
-          <FormButton10 title="Enregister" onPress={handleSubmit} />
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
         </View>
       </View>
       </Container>
@@ -116,7 +116,7 @@ const AVC1 = (props) => {
   );
 };
 const mystyle = {
-  color: "white",
+  
 
   backgroundposition: "center",
   backgroundrepeat: "no-repeat",

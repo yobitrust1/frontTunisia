@@ -1,30 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
+
+
+
+
 import FormInput from "../../Form/FormInput";
-import FormButton from "../../Form/FormButton";
+
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
-import {View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Container from '@material-ui/core/Container';
-import ParticlesBg from "particles-bg";
+import add from "../../img/11.png";
 import '../home.css';
-import ol from "../../img/web0o.png";
-let config = {
-      num: [4, 7],
-      rps: 0.1,
-      radius: [5, 40],
-      life: [1.5, 3],
-      v: [2, 3],
-      tha: [-50, 50],
-      alpha: [0.6, 0],
-      scale: [.1, 0.9],
-      position: "all",
-      color: [ "#ff0000"],
-      cross: "dead",
-      random: 10
-    };
-const ATCDchir = (props) => {
 
+
+  
+
+
+const ConfirmationDiag = (props) => {
+ 
   const [ATCD, setATCD] = useState("");
 
 
@@ -45,30 +40,51 @@ const ATCDchir = (props) => {
   }
 
 
-
-
   return (
     <div class="big">
-  
-    <div class="d-flex md-0  py-0 ">
-    <img src={ol} />
+    <div style={mystyle}>
+    <div class="container h-100">
+     <div class="d-flex justify-content-center h-10">
+    <div class="user_card"> 
+    <div class="d-flex justify-content-center">
+    <div class="brand_logo_container"> 
+          <img src={add} class="brand_logo" alt="Logo"/>
     </div>
-    <div class="jm">
-          <Container >
+    </div>
+    <div class="d-flex justify-content-center form_container">
+    </div>
+    <div class="d-flex justify-content-center mt-10 lo_container">
+<Container >
+
       <View style={tailwind(' items-center ')} >
-        <Text style={tailwind('text-gray-700 font-bold py-2 text-xl')}>ATCD chirurgicaux</Text>
+        <Text style={tailwind('text-danger-1000 font-bold py-2 text-xl')}>ATCD chirurgicaux</Text>
+
         <FormInput placeholder="ATCD chirurgicaux" onChangeText={handleATCDChange} />
+
+
+
         <View style={styles.row}>
-          <FormButton title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux") }} />
-          <FormButton title="Enregister" onPress={handleSubmit} />
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
 
         </View>
       </View>
+    
       </Container>
-</div>
-
-</div>
+      </div>  
+      </div>
+      </div>
+      </div>  
+      </div>
+      </div>
   );
+};
+const mystyle = {
+  
+
+  backgroundposition: "center",
+  backgroundrepeat: "no-repeat",
+  backgroundsize: "cover"
 };
 const styles = StyleSheet.create({
   row: {
@@ -78,9 +94,8 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#2193b0',
+    flexDirection: "row",
+    padding: 10   
   },
 });
 const mapStateToProps = (state) => ({
@@ -91,4 +106,4 @@ const mapActionToProps = {
   antecedentsMedicaux: actions.antecedentsMedicaux
 };
 
-export default connect(mapStateToProps, mapActionToProps)(ATCDchir);
+export default connect(mapStateToProps, mapActionToProps)(ConfirmationDiag);

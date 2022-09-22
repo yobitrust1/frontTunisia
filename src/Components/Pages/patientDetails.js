@@ -36,18 +36,15 @@ const PatientDetails = (props) => {
         cross: "dead",
         random: 10
       };
-      var handleSubmit = () => {
+      var handleSubmit1 = () => {
         console.log("lol")
         
         props.removepAntecedentMedical(props.patientList["cin"])
         
       }
-      var handleSubmit1 = () => {
-        props.removepInfosGenerales(props.patientList["cin"])
-        console.log("lol")
-      }
+     
       var handleSubmit2 = () => {
-        props.removepInfosGenerales(props.patientList["cin"])
+        props.removepHabitudesDeVie(props.patientList["cin"])
       }
       var handleSubmit3 = () => {
         props.removepExpoRisque(props.patientList["cin"])
@@ -76,7 +73,7 @@ const PatientDetails = (props) => {
           <div class="row justify-content-center">
           <div class="col-sm-6 ">
           <button type="button"  class="btn lo_btn" onClick={() => { props.navigation.navigate("InfosGenerales") }}>Informations générales</button>
-          </div><div class="col-sm-4"><button class="btn lo_btn" onClick={() => { handleSubmit1(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+          </div>
          </div>
           
          <div class="row justify-content-center">
@@ -88,13 +85,13 @@ const PatientDetails = (props) => {
 <div class="row justify-content-center">
           <div class="col-sm-6 ">
             <button type="button"  class="btn lo_btn" onClick={() => { props.navigation.navigate("AntecedentsList") }}>Anécédents médicaux</button>
-            </div><div class="col-sm-4"><button class="btn lo_btn"  onClick={handleSubmit}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer<Toaster /></button> </div>
+            </div><div class="col-sm-4"><button class="btn lo_btn"  onClick={() => { handleSubmit1(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer<Toaster /></button> </div>
          </div>
           
           <div class="row justify-content-center">
           <div class="col-sm-6 ">
           <button type="button"  class="btn lo_btn" onClick={() => { props.navigation.navigate("Exposition") }}>Expositions a risque</button>
-          </div><div class="col-sm-4"><button class="btn lo_btn" onClick={handleSubmit3}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+          </div><div class="col-sm-4"><button class="btn lo_btn"  onClick={() => { handleSubmit3(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
          </div>
           <div class="row justify-content-center">
           <div class="col-sm-6 ">

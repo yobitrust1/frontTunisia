@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
 import FormInput from "../../Form/FormInput";
-import FormButton from "../../Form/FormButton";
-import FormButton1 from "../../Form/FormButton1";
+
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import { View, Text, StyleSheet } from 'react-native';
 import Container from '@material-ui/core/Container';
 import ParticlesBg from "particles-bg";
 import '../home.css';
-import oo from "../../img/web08.png";
+import add from "../../img/11.png";
 let config = {
       num: [4, 7],
       rps: 0.1,
@@ -25,7 +25,7 @@ let config = {
       random: 10
     };
 
-const InsRenaleChro = (props) => {
+const InsRenaleChro1 = (props) => {
 
   const [anciennete, setAnciennete] = useState(0.0);
   const [traitement, setTraitement] = useState(0);
@@ -57,19 +57,25 @@ const InsRenaleChro = (props) => {
 
 
   return (
-<div class="big">
-  
-  <div class="d-flex md-0  py-0 ">
-  <img src={oo} />
-  </div>
-  <div class="j1j">
-        <Container >
+    <div class="big">
+    <div style={mystyle}>
+    <div class="container h-100">
+     <div class="d-flex justify-content-center h-10">
+    <div class="user_card"> 
+    <div class="d-flex justify-content-center">
+    <div class="brand_logo_container"> 
+          <img src={add} class="brand_logo" alt="Logo"/>
+    </div>
+    </div>
+    <div class="d-flex justify-content-center form_container">
+    </div>
+    <div class="d-flex justify-content-center mt-10 lo_container">
+<Container >
       <View style={tailwind(' items-center ')} >
         <Text style={tailwind('text-gray-700 font-bold py-2 text-xl')}>Insuffisance rénale chronique</Text>
 
         <FormInput title="Ancienneté" placeholder="Ancienneté" onChangeText={handleAnciennteChange} type="decimal-pad"  type="number"  />
         <FormInput title="Traitement" placeholder="Traitement" onChangeText={handleTraitementChange} />
-
         <View style={styles.row}>
         <div  onChange={handleHemodialyseChange}>
         <Text style={tailwind('text-gray-700 py-2')}>Hémodialyse?</Text>
@@ -79,18 +85,27 @@ const InsRenaleChro = (props) => {
         </View>
 
         <View style={styles.row}>
-          <FormButton1 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux") }} />
-          <FormButton1 title="Enregister" onPress={handleSubmit} />
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
 
         </View>
-
-
-
       </View>
       </Container>
-</div>
-</div>
+      </div>  
+      </div>
+      </div>
+      </div>  
+      </div>
+      </div>
+
   );
+};
+const mystyle = {
+  
+
+  backgroundposition: "center",
+  backgroundrepeat: "no-repeat",
+  backgroundsize: "cover"
 };
 const styles = StyleSheet.create({
   row: {
@@ -113,4 +128,4 @@ const mapActionToProps = {
   antecedentsMedicaux: actions.antecedentsMedicaux
 };
 
-export default connect(mapStateToProps, mapActionToProps)(InsRenaleChro);
+export default connect(mapStateToProps, mapActionToProps)(InsRenaleChro1);

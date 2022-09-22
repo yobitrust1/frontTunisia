@@ -27,7 +27,37 @@
   border: 2px solid white;
   border-radius: 10px;
   text-shadow: 1px 1px 3px black;
+}.bg-text1{
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  color: rgb(0, 0, 0);
+  font-weight:600;
+  box-shadow: 10px 10px 30px black;
+  padding: 3rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-decoration-color: black;
 }
+.bg-text2{
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  color: rgb(0, 0, 0);
+  font-weight:600;
+  box-shadow: 10px 10px 30px black;
+  padding: 3rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-decoration-color: black;
+}
+
 
 .contactIcons{
   font-size: 2.5rem;

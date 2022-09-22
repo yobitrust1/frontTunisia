@@ -13,7 +13,7 @@ const FormInput = (props) => {
     
     <input style={tailwind('border  border-blue-800 my-3  rounded-md w-1/3 h-10')} 
           type={props.type} 
-          placeholder1={props.placeholder} 
+          placeholder={props.placeholder1} 
           min={props.min}
           max={props.max}
           maxLength={30}
@@ -22,7 +22,7 @@ const FormInput = (props) => {
       <Text style={tailwind("py-6 mx-2 ")}>/</Text>
       <input style={tailwind('border  border-blue-800 my-3  rounded-md w-1/3 h-10')} 
           type={props.type} 
-          placeholder2={props.placeholder} 
+          placeholder={props.placeholder2} 
           min={props.min}
           max={props.max}
           maxLength={10}

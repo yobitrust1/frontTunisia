@@ -43,11 +43,12 @@ const Open = (props) => {
           <div class="profile-img">
             <img src={ann} alt="profile_img" height="140px" width="140px"/>
         </div>
+        
         <div class="d-flex justify-content-center mt-10 log_container">
         <button type="button"  class="btn log_btn" onClick={() => props.navigation.navigate("Admin")}>Admin</button>
         </div>
         <div class="d-flex justify-content-center mt-10 log_container">
-        <button type="button"  class="btn log_btn" onClick={() => props.navigation.navigate("Login")} >Login</button>
+        <button type="button"  class="btn log_btn" onClick={() => props.navigation.navigate("Login")} >User</button>
         </div>
       </div>
     </div>

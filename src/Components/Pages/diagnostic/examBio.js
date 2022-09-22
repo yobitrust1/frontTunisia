@@ -3,8 +3,6 @@ import tailwind from 'tailwind-rn';
 import FormButton from "../../Form/FormButton";
 import FormButton0 from "../../Form/FormButton0";
 import FormInput4 from "../../Form/FormInput4";
-
-
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import { View, Text, StyleSheet } from 'react-native';

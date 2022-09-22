@@ -120,7 +120,7 @@ var handlePacttChange = (data) => {
 
    
   
-<h2 class="font-weight-bold text-center p-5 text-primary">Traitement</h2>
+<h2 class="font-weight-bold text-center p-5 text-primary">Traitement1</h2>
  <div class="row mx-4">
  <label class="form-label mx-3">Traitement ?</label>
  <div class="form-check mx-1">

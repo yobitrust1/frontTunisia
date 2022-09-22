@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
 import FormInput from "../../Form/FormInput";
-import FormButton from "../../Form/FormButton";
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import { View, Text, StyleSheet } from 'react-native';
@@ -60,8 +60,8 @@ const AutresATCD1 = (props) => {
         <Text style={tailwind('text-gray-700 font-bold py-2 text-xl')}> Autres ATCD </Text>
         <FormInput placeholder="Autres ATCD" onChangeText={handleATCDChange} />
         <View style={styles.row}>
-          <FormButton title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
-          <FormButton title="Enregister" onPress={handleSubmit} />
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
         </View>
       </View>
     
@@ -75,7 +75,7 @@ const AutresATCD1 = (props) => {
   );
 };
 const mystyle = {
-  color: "white",
+  
 
   backgroundposition: "center",
   backgroundrepeat: "no-repeat",

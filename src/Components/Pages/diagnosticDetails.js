@@ -12,7 +12,19 @@ import { medicalService } from '../../Reducers/medicalService';
 import Container from '@material-ui/core/Container';
 import ParticlesBg from "particles-bg";
 import './home.css';
+import toast, { Toaster } from 'react-hot-toast';
 
+  const notify = () => toast.success('Supprimer', {
+    style: {
+      border: '1px solid #713200',
+      padding: '16px',
+      color: '#713200',
+    },
+    iconTheme: {
+      primary: '#713200',
+      secondary: '#FFFAEE',
+    },
+  });
 const DiagnosticDetails = (props) => {
   let config = {
         num: [4, 7],
@@ -78,52 +90,50 @@ const DiagnosticDetails = (props) => {
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Confirmation diagnostique" onPress={() => { props.navigation.navigate("ConfirmationDiagOpen") }} />
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit}><i class="col-sm-5 fas fa-trash-alt"></i> Supprimer</button> </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit(); notify();}}><i class="col-sm-5 fas fa-trash-alt"></i> Supprimer<Toaster /></button> </div>
                     </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Admission" onPress={() => { props.navigation.navigate("Admission") }} />
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit1}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit1(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
                     </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Caractéristiques cliniques" onPress={() => { props.navigation.navigate("CaracCliniques") }} />
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit2}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit2(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
                     </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Examens cliniques" onPress={() => { props.navigation.navigate("ExamenCliniques") }} />
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit3}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit3(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
                     </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Examens radiologiques et para-cliniques" onPress={() => props.navigation.navigate("ExamenRadioParaCliOpen")} />
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit4}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
-                    </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit4(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>                    </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Examens biologiques" onPress={() => props.navigation.navigate("ExamBioOpen")} />
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit5}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit5(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
                     </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Traitement" onPress={()=>props.navigation.navigate("Traitement")}/>
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit6}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit6(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
                     </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Exposition" onPress={()=>props.navigation.navigate("Exposition")}/>
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit7}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit7(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
                     </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Evolution"  onPress={()=>props.navigation.navigate("Evolution")}/>
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit8}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
-                    </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit8(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>                    </div>
                     <div class="row justify-content-center">
                     <div class="col-sm-6 ">
                     <FormButton0 title="Evaluation finale" onPress={() => props.navigation.navigate("EvaluationFinale")} />
-                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={handleSubmit9}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
+                    </div><div class="col-sm-6"><button class="btn lo_btn" onClick={() => { handleSubmit9(); notify();}}><i class="col-sm-4 fas fa-trash-alt"></i> Supprimer</button> </div>
                     </div>
                 </div>
 

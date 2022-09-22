@@ -8,6 +8,8 @@ import FormButton3 from "../../Form/FormButton3";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import '../home.css';
+import "../login1.css";
+
 import ma from "../../img/m.png";
 let config = {
       num: [4, 7],
@@ -25,12 +27,9 @@ let config = {
     };
 function Dash2(props) {
   return (
-    <div class="big">
-  
-<div class="d-flex md-0  py-0 ">
-<img src={ma} />
-</div>
-<div class="mal">
+    <div>
+    <div className="bg-image"></div>
+    <div className="bg-text2">
 <Container >
 
     <div className="container" style={{ width: "600px" }}>

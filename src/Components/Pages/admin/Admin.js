@@ -91,8 +91,9 @@ const Admin = (props) => {
     <div class="form-check">
     
     <button type="submit" class="btn btn-in float-right" onClick={handleSubmit}>Se connecter</button>
+    <button  class="btn btn-in float-right" onClick={() => { props.navigation.navigate("Open") }}>Retour</button>
   </div>
-<div class="copy-text">Copyright2020 All rights reserved |<i class="fa fa-heart"></i> <a href="http://grafreez.com">youbitrust</a></div>
+<div class="copy-text">Copyright2020 All rights reserved |<i class="fa fa-heart"></i> <a href="http://yobitrust.com/">youbitrust</a></div>
     </div>
     <div class="col-md-8 banner-sec">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

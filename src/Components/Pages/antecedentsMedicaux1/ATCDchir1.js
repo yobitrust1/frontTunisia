@@ -5,8 +5,8 @@ import tailwind from 'tailwind-rn';
 
 
 import FormInput from "../../Form/FormInput";
-import FormButton from "../../Form/FormButton";
-import FormButton11 from "../../Form/FormButton11";
+
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import { View, Text, StyleSheet } from 'react-native';
@@ -64,8 +64,8 @@ const ConfirmationDiag = (props) => {
 
 
         <View style={styles.row}>
-          <FormButton11 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
-          <FormButton11 title="Enregister" onPress={handleSubmit} />
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
 
         </View>
       </View>
@@ -80,7 +80,7 @@ const ConfirmationDiag = (props) => {
   );
 };
 const mystyle = {
-  color: "white",
+  
 
   backgroundposition: "center",
   backgroundrepeat: "no-repeat",

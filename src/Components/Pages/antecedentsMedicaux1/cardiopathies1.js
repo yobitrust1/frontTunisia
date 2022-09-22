@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import tailwind from 'tailwind-rn';
 import FormInput from "../../Form/FormInput";
-import FormButton from "../../Form/FormButton";
-import FormButton9 from "../../Form/FormButton9";
+
+import FormButton8 from "../../Form/FormButton8";
 import * as actions from "../../../Actions/medicalService";
 import { connect } from "react-redux";
 import {View, Text, StyleSheet } from 'react-native';
@@ -87,8 +87,8 @@ const Cardiopathies1 = (props) => {
       </div>
 
         <View style={styles.row}>
-          <FormButton9 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
-          <FormButton9 title="Enregister" onPress={handleSubmit} />
+          <FormButton8 title="Retour" onPress={() => { props.navigation.navigate("AddAntecendentsMedicaux1") }} />
+          <FormButton8 title="Enregister" onPress={handleSubmit} />
 
         </View>
 
@@ -107,7 +107,7 @@ const Cardiopathies1 = (props) => {
 };
 
 const mystyle = {
-  color: "white",
+  
 
   backgroundposition: "center",
   backgroundrepeat: "no-repeat",
