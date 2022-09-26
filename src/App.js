@@ -98,6 +98,9 @@ import ExamenRadioParaCliList from "./Components/Pages/diagnostic/examenRadioPar
 import ExamenRadioParaCliOpen from "./Components/Pages/diagnostic/examenRadioParaCliOpen";
 import ConfirmationDiagList from "./Components/Pages/diagnostic/confirmationDiagList";
 import ConfirmationDiagOpen from "./Components/Pages/diagnostic/confirmationDiagOpen";
+import confirmationDiagModif from "./Components/Pages/diagnostic/confirmationDiagModif";
+import examBioModif from "./Components/Pages/diagnostic/examBioModif";
+import examenRadioParaCliModif from "./Components/Pages/diagnostic/examenRadioParaCliModif";
 import Traitement1 from "./Components/Pages/diagnostic1/traitement1";
 import Evolution1 from "./Components/Pages/diagnostic1/evolution1";
 
@@ -207,6 +210,10 @@ const App = () => {
           <Stack.Screen name="ConfirmationDiagList" component={ConfirmationDiagList} />
           <Stack.Screen name="ExamenRadioParaCliOpen" component={ExamenRadioParaCliOpen} />
           <Stack.Screen name="ExamenRadioParaCliList" component={ExamenRadioParaCliList} />
+          <Stack.Screen name="confirmationDiagModif" component={confirmationDiagModif} />
+          <Stack.Screen name="examBioModif" component={examBioModif} />
+          <Stack.Screen name="examenRadioParaCliModif" component={examenRadioParaCliModif} />
+          
           <Stack.Screen name="ExamBioOpen" component={ExamBioOpen} />
           <Stack.Screen name="Traitement1" component={Traitement1}/>
           <Stack.Screen name="Evolution1" component={Evolution1}/>

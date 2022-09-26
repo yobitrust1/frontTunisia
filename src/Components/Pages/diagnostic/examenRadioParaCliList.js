@@ -14,10 +14,9 @@ const AntecedentsList = (props) => {
   })
     const test =props.patientList.examRadio_paraCli;
     var handleModifier = (item,date) => {
-      var values = {
-        "type": item,
-        "datepr":date
-      }
+      localStorage.setItem("type", item)
+      localStorage.setItem("datePr",date)
+      props.navigation.navigate("examenRadioParaCliModif")
     }
   
     var handleRemove = (item,date) => {

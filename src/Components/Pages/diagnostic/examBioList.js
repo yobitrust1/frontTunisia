@@ -14,10 +14,9 @@ const AntecedentsList = (props) => {
   })
     const test =props.patientList.examBio;
     var handleModifier = (item,date) => {
-      var values = {
-        "type": item,
-        "datePr":date
-      }
+      localStorage.setItem("type", item)
+      localStorage.setItem("datePr",date)
+      props.navigation.navigate("examBioModif")
     }
   
     var handleRemove = (item,date) => {
@@ -36,11 +35,11 @@ const AntecedentsList = (props) => {
 
         <div>
           
-    {Object.keys(test).map((setNom, key) => (<div> 
+    {test!=null&& Object.keys(test).map((setNom, key) => (<div> 
         <h1>{setNom}</h1>
     <div >
-      {Object.keys(test[setNom]).map((key1, key2) => (<div> 
-        <div> {key1=="gbs" && <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
+      {test[setNom]!=null&& Object.keys(test[setNom]).map((key1, key2) => (<div> 
+        <div> {key1=="gbs" &&test[setNom][key1]!=null&& <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
                           <Text >{test[setNom][key1][key2]["datePr"]}</Text>   
                           <TouchableOpacity onPress={() => handleModifier("NFS",test[setNom][key1][key2]["datePr"])}>
                           <Text style={tailwind('text-teal-200 px-8')}> Modifier ? </Text>
@@ -51,7 +50,7 @@ const AntecedentsList = (props) => {
                           </div>))}</div>
         
       }</div> <div> 
-      {key1=="creats" && <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
+      {key1=="creats" &&test[setNom][key1]!=null&&  <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
                           <Text >{test[setNom][key1][key2]["datePr"]}</Text>   
                           <TouchableOpacity onPress={() => handleModifier("BilanRenal",test[setNom][key1][key2]["datePr"])}>
                           <Text style={tailwind('text-teal-200 px-8')}> Modifier ? </Text>
@@ -62,7 +61,7 @@ const AntecedentsList = (props) => {
                           </div>))}</div>
         
       }</div> <div> 
-      {key1=="bilirus" && <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
+      {key1=="bilirus" &&test[setNom][key1]!=null&&  <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
                           <Text >{test[setNom][key1][key2]["datePr"]}</Text>   
                           <TouchableOpacity onPress={() => handleModifier("BilanHepa",test[setNom][key1][key2]["datePr"])}>
                           <Text style={tailwind('text-teal-200 px-8')}> Modifier ? </Text>
@@ -73,7 +72,7 @@ const AntecedentsList = (props) => {
                           </div>))}</div>
         
       }</div> <div> 
-      {key1=="phs" && <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
+      {key1=="phs" &&test[setNom][key1]!=null&&  <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
                           <Text >{test[setNom][key1][key2]["datePr"]}</Text>   
                           <TouchableOpacity onPress={() => handleModifier("GDSA",test[setNom][key1][key2]["datePr"])}>
                           <Text style={tailwind('text-teal-200 px-8')}> Modifier ? </Text>
@@ -84,7 +83,7 @@ const AntecedentsList = (props) => {
                           </div>))}</div>
         
       }</div> <div> 
-      {key1=="naks" && <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
+      {key1=="naks" &&test[setNom][key1]!=null&&  <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
                           <Text >{test[setNom][key1][key2]["datePr"]}</Text>   
                           <TouchableOpacity onPress={() => handleModifier("Ionogra",test[setNom][key1][key2]["datePr"])}>
                           <Text style={tailwind('text-teal-200 px-8')}> Modifier ? </Text>
@@ -95,7 +94,7 @@ const AntecedentsList = (props) => {
                           </div>))}</div>
         
       }</div> <div> 
-      {key1=="pathss" && <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
+      {key1=="pathss" &&test[setNom][key1]!=null&&  <div> {Object.keys(test[setNom][key1]).map((key2, key3) => (<div> 
                           <Text >{test[setNom][key1][key2]["datePr"]}</Text>   
                           <TouchableOpacity onPress={() => handleModifier("AutreBilan",test[setNom][key1][key2]["datePr"])}>
                           <Text style={tailwind('text-teal-200 px-8')}> Modifier ? </Text>
