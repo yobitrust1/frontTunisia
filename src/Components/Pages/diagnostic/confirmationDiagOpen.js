@@ -42,7 +42,7 @@ const AntecendentsMedicaux = (props) => {
           <FormButton2 title="Liste Confirmation diagnostique" onPress={() => props.navigation.navigate("ConfirmationDiagList")} />
         </View>
         <FormButton2 title="Retour" onPress={() => { props.navigation.navigate("DiagnosticDetails") }} />
-      </View>
+        </View>
       </Container>
       </View>
 </div>

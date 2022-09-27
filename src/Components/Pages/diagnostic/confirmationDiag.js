@@ -61,7 +61,7 @@ const ConfirmationDiag = (props) => {
       result: resultat,
       type: test
     }
-    //console.log(values)
+    console.log(values)
     props.addConfDiag(props.patientList["cin"], values)
     props.navigation.navigate("DiagnosticDetails")
   }
