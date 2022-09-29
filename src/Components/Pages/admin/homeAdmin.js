@@ -50,9 +50,7 @@ const HomeAdmin = (props) => {
 		<div class=" col-mt-8 title">
 			<h5>Bienvenue à la plate-forme SARS-COV2 et autre maladie infectieuse</h5>
 		</div>
-    <div class="d-flex justify-content-center mt-1 lin_container">
-        <button type="button"  class="btn lin_btn" onClick={() => props.navigation.navigate("Signup")}>SignUp</button>
-        </div>
+    
         <div class="d-flex justify-content-center mt-10 lin_container">
         <button type="button"  class="btn lin_btn" onClick={() => props.navigation.navigate("Patient")}>Patient</button>
         </div>
